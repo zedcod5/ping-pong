@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ping-Pong с AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <header class="game-header">
+        <h1>Ping-Pong с AI</h1>
+        <div class="scoreboard">
+          <span>Игрок: <span id="playerScore">0</span></span>
+          <span>AI: <span id="aiScore">0</span></span>
+        </div>
+        <div class="header-controls">
+          <div class="difficulty">
+            <label for="difficultySelect">Сложность:</label>
+            <select id="difficultySelect">
+              <option value="easy">Лёгкая</option>
+              <option value="normal" selected>Нормальная</option>
+              <option value="hard">Сложная</option>
+            </select>
+          </div>
+          <div class="speed">
+            <label for="speedSelect">Скорость:</label>
+            <select id="speedSelect">
+              <option value="slow">Низкая</option>
+              <option value="normal" selected>Средняя</option>
+              <option value="fast">Высокая</option>
+            </select>
+          </div>
+        </div>
+      </header>
+
+      <main class="game-main">
+        <canvas id="gameCanvas" width="640" height="380"></canvas>
+      </main>
+
+      <footer class="game-footer">
+        <div class="controls">
+          <button id="startPauseBtn">Старт</button>
+          <button id="resetBtn">Сброс</button>
+        </div>
+        <p class="hint">
+          Управление: <strong>W / S</strong> или <strong>↑ / ↓</strong>
+        </p>
+      </footer>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
+
+
